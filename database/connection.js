@@ -10,6 +10,7 @@ const connection = async () => {
         console.log(`mongo connect: ${con.connection.host}`)
     } catch (err) {
         console.log('connection error: ', err.message)
+        process.exit(1);
     }
 }
 
