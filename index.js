@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const connection = require('./database/connection');
 var fileupload = require("express-fileupload");
 const path = require('path')
+const fs = require('fs')
 const app = express()
 
 connection()
