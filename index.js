@@ -18,10 +18,6 @@ app.use(fileupload({
     useTempFiles: true
 }))
 
-app.get('/', (req, res) => {
-    return res.status(200).json({ page: 'home' })
-})
-
 app.use('/api/car', require('./routes/CarRoutes'))
 app.use('/api/order', require('./routes/OrderRoutes'))
 app.use('/api', require('./routes/Cloudinary'))
@@ -35,5 +31,3 @@ app.get('*', (req, res) => {
 connection().then(() => {
     app.listen(process.env.PORT, () => console.log(`Server is listening on port: http://localhost:${process.env.PORT}`))
 })
-
-// app.listen(process.env.PORT, () => console.log(`Server is listening on port: http://localhost:${process.env.PORT}`))
