@@ -28,7 +28,7 @@ app.use('/api/user', require('./routes/UserRouters'))
 
 app.use(express.static(path.join(__dirname, "./client/build")))
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, "./client/build/index.hyml"))
+    res.sendFile(path.join(__dirname, "./client/build/index.html"))
 })
 
 app.listen(process.env.PORT, () => console.log(`Server is listening on port: http://localhost:${process.env.PORT}`))
